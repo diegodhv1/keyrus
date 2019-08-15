@@ -1,0 +1,103 @@
+<!doctype html>
+<!--Portuguese Language -->
+<!--author> Diego Hernandez-->
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags to responsive design -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="./bundle.min.js"></script>
+  <title></title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center h-100">
+      <!-- alerts -->
+
+      <div class="d-flex justify-content-center">
+        <div class="alert_content">
+          <div class="alert--success" id="alert-success" class="alert alert--success alert-dismissible fade mx-auto" role="alert">
+            <button id="close-alert-success" type="button" class="d-flex justify-content-center close"
+              aria-label="Close">
+              <span aria-hidden="true">&#10003;</span>
+            </button>
+            <strong>Você foi logado com sucesso</strong>
+          </div>
+
+          <div class="alert--fail" id="alert-error" class="alert alert-danger alert-dismissible fade mx-auto" role="alert">
+            <button id="close-alert-error" type="button" class="d-flex justify-content-center close"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Digite seu email e senha</strong>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="d-flex justify-content-center">
+
+        <div class="box--main">
+          <div class="loginForm">
+            <div class="loginForm__label">
+              <h3>Entrar na minha conta</h3>
+            </div>
+            <form id="form-login">
+              <div class="input-group form-group">
+                <input type="email" class="form-control" placeholder="Email" required>
+                <i class="fas fa-user icon_style"></i>
+              </div>
+              <div class="input-group form-group">
+                <input type="password" class="form-control" placeholder="Senha" required>
+                <i class="fas fa-lock icon_style"></i>
+              </div>
+
+              <div class="form-group align-items-center">
+                <button type="button" id="btn-access" class="btn--blue">Entrar</button>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" id="customCheck1">
+                <label class="form-login-checkbox-label loginForm__label" for="customCheck1">Mantenha-me
+                  conectado</label>
+              </div>
+            </form>
+          </div>
+          <div class="box--2"></div>
+          <div class="box--3"></div>
+        </div>
+      </div>
+
+      <div class="p-2 bd-highlight mt-3">
+        <div class="d-flex justify-content-center subscribe">
+          Precisa de uma conta? <a href="#">Inscrever-se</a>
+        </div>
+
+        <div class="d-flex justify-content-center subscribe--register">
+          <span>Esqueceu sua senha? <a href="#">Clique aqui.</a></span>
+        </div>
+      </div>
+
+      <div class="p-2 bd-highlight">
+        <div class="d-flex justify-content-center information">
+          <div class="information__i" aria-hidden="true">i</div>
+          <div class="information__company">Keyrus</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

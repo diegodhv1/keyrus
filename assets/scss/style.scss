@@ -1,0 +1,297 @@
+/* Css applied with BEM standard*/
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Numans");
+
+/* Variable definitions*/
+$btn-color-blue: #2993dd;
+$btn-color-hover-blue: #0b75c0;
+$white: #f0f0f0;
+$border-radius4: 4;
+
+$major-grid-size: 30px;
+$major-grid-color: rgba(238, 238, 238, 0.911);
+$major-grid-weight: 1px;
+
+$minor-grid-size: 30px;
+$minor-grid-color: rgba(238, 238, 238, 0.911);
+$minor-grid-weight: 1px;
+
+//@mixins
+@mixin extra-small-xs {
+    @media (min-width: 369px) { @content; }
+  }
+
+  @mixin extra-small-xs2 {
+    @media (min-width: 370px) { @content; }
+  }
+
+  @mixin extra-small-xs3 {
+    @media (min-width: 414px) { @content; }
+  }
+
+@mixin extra-small {
+    @media (min-width: 600px) { @content; }
+  }
+
+@mixin for-tablet-portrait-up {
+@media (min-width: 600px) { @content; }
+}
+
+@mixin medium-device {
+@media (min-width: 768px) { @content; }
+}
+
+@mixin for-laptos {
+@media (min-width: 998px) { @content; }
+}
+@mixin for-desktop-up {
+@media (min-width: 1200px) { @content; }
+}
+
+
+html,
+body {
+  height: 100%;
+  background-color: #f6f6f7;
+  background-size: $major-grid-size $major-grid-size;
+  background-image: repeating-linear-gradient(
+      0deg,
+      $major-grid-color,
+      $major-grid-color $major-grid-weight,
+      transparent $major-grid-weight,
+      transparent $major-grid-size
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      $major-grid-color,
+      $major-grid-color $major-grid-weight,
+      transparent $major-grid-weight,
+      transparent $major-grid-size
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $minor-grid-color,
+      $minor-grid-color $minor-grid-weight,
+      transparent $minor-grid-weight,
+      transparent $minor-grid-size
+    ),
+    repeating-linear-gradient(
+      -90deg,
+      $minor-grid-color,
+      $minor-grid-color $minor-grid-weight,
+      transparent $minor-grid-weight,
+      transparent $minor-grid-size
+    );
+}
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+
+//Css with BEM
+
+//box content
+.box {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 390px;
+  height: 345px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 0px rgba(30, 28, 28, 0.19);
+  background-color: #fafafb;
+  position: relative;
+}
+
+.box--main {
+  @extend .box;
+  z-index: 10;
+}
+
+.box--2 {
+  @extend .box;
+  position: absolute;
+  height: 350px;
+  z-index: -2;
+  top: 1px;
+  background-color: transparent;
+  width: 329px;
+
+
+ @include for-tablet-portrait-up  {    
+    width: 389px;
+ }
+
+ @include medium-device  {    
+    width: 389px;
+ }
+
+ 
+ @include for-laptos {    
+    width: 394px;
+ }
+
+ @include extra-small {    
+    width: 340px;
+ }
+
+ @include  for-desktop-up {    
+    width: 390px;
+ }
+
+ @include  extra-small-xs  {    
+    width: 290px;
+ }
+
+ @include  extra-small-xs2  {    
+    width: 345px;
+ }
+
+ @include  extra-small-xs3  {    
+    width: 383px;
+ }
+
+}
+
+.box--3 {
+  @extend .box--2;
+  z-index: -1;
+  height: 355px;
+}
+
+
+.box--main:before {
+  content: "";
+  position: absolute;
+  top: 329px;
+  right: 0;
+  border-width: 16px 16px 0 0;
+  border-style: solid;
+  border-color: #c0c0c0 #f6f6f7d5;
+}
+
+//login form
+.loginForm {
+  padding: 30px;
+  text-align: center;
+}
+
+.loginForm input[type="text"] {
+  width: 212px;
+  height: 35px;
+  border-radius: $border-radius4;
+  box-shadow: -0.407px -0.914px 0px rgba(0, 0, 0, 0.11);
+  background-color: #f7f6f6;
+}
+
+.loginForm__label {
+  color: #939797;
+  font-weight: bold;
+}
+
+.loginForm input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid rgba(134, 134, 134, 0.66);
+  color: #cacccc;
+}
+
+// button
+.btn {
+  width: 114px;
+  height: 39px;
+  border-radius: $border-radius4;
+  text-align: center;
+  font-weight: bold;
+  color: $white;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.21);
+  background-color: $btn-color-blue;
+  border: 1px solid #0f578a;
+}
+
+.btn--blue {
+  @extend .btn;
+  background-color: $btn-color-blue;
+}
+
+.btn--blue:hover {
+  color: $white;
+  background-color: $btn-color-hover-blue;
+}
+
+//information company
+.information {
+  height: 26px;
+  text-align: center;
+}
+
+.information__i {
+  @extend .information;
+  width: 29px;
+  background-color: #7b7b7b;
+  color: white;
+  font-weight: bold;
+}
+
+.information__company {
+  @extend .information;
+  width: 441px;
+  background-color: white;
+  color: #cecece;
+  font-style: italic;
+}
+
+//register company
+.subscribe {
+  @extend .loginForm__label;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.subscribe a {
+  color: $btn-color-hover-blue;
+}
+
+.subscribe--register {
+  @extend .subscribe;
+  text-decoration: none;
+}
+
+//icons
+.icon_style {
+  position: relative;
+  right: 22px;
+  top: 10px;
+  color: rgba(128, 128, 128, 0.548);
+}
+
+//alerts
+.alert {
+  height: 47px;
+  border-radius: 8px;
+  box-shadow: 0 0 7px rgba(30, 28, 28, 0.19);
+  .close {
+    left: 0;
+    line-height: 0.75;
+  }
+}
+
+.alert--success {
+  @extend .alert;
+  background-image: linear-gradient(0deg, #57db96 0%, #66e0a3 100%);
+  border: 1px solid #49cf8b;
+}
+
+.alert--fail {
+  @extend .alert;
+  background-image: linear-gradient(0deg, #ed6d6d 0%, #ef7b7b 100%);
+  border: 1px solid #db5252;
+}
+
+.alert_content {
+  width: 800px;
+  margin-bottom: 20px;
+}
+
+
