@@ -8,10 +8,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    
+
 
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="./bundle.min.js"></script>
@@ -26,17 +30,15 @@
 
       <div class="d-flex justify-content-center">
         <div class="alert_content">
-          <div class="alert--success" id="alert-success" class="alert alert--success alert-dismissible fade mx-auto" role="alert">
-            <button id="close-alert-success" type="button" class="d-flex justify-content-center close"
-              aria-label="Close">
-              <span aria-hidden="true">&#10003;</span>
+          <div id="alert-success" class="alert alert-dismissible fade mx-auto alert--success" role="alert">
+            <button type="button" class="d-flex justify-content-center close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true" id="close-alert">&#10003;</span>
             </button>
             <strong>Você foi logado com sucesso</strong>
           </div>
 
-          <div class="alert--fail" id="alert-error" class="alert alert-danger alert-dismissible fade mx-auto" role="alert">
-            <button id="close-alert-error" type="button" class="d-flex justify-content-center close"
-              aria-label="Close">
+          <div id="alert-error" class="alert alert-danger alert-dismissible fade mx-auto alert--fail" role="alert">
+            <button id="close-alert-error" type="button" class="d-flex justify-content-center close" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
             <strong>Digite seu email e senha</strong>
@@ -63,7 +65,7 @@
               </div>
 
               <div class="form-group align-items-center">
-                <button type="button" id="btn-access" class="btn--blue">Entrar</button>
+                <button type="button" id="btn-access" class="btn--blue" type="submit">Entrar</button>
               </div>
 
               <div class="form-group">

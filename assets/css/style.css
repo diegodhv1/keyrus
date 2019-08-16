@@ -7200,7 +7200,8 @@ body {
 .alert, .alert--success, .alert--fail {
   height: 47px;
   border-radius: 8px;
-  box-shadow: 0 0 7px rgba(30, 28, 28, 0.19); }
+  box-shadow: 0 0 7px rgba(30, 28, 28, 0.19);
+  text-align: right; }
   .alert .close, .alert--success .close, .alert--fail .close {
     left: 0;
     line-height: 0.75; }
