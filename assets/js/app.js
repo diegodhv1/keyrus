@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+$(function () {
     /**
      * Validate login form
      * 
@@ -11,13 +10,13 @@ $(document).ready(function () {
             $('#alert-success').addClass("show");
             setTimeout(function () {
                 $('#alert-success').removeClass("show");
-            }, 4000)
+            }, 2000)
         } else {
             $('#alert-error').addClass("show");
             setTimeout(function () {
                 $('#alert-error').removeClass("show");
-            }, 4000)
-        }   
+            }, 2000)
+        }
     });
 });
 
