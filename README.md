@@ -1,4 +1,4 @@
-# Company: keyrus
+# Company: Personal
 ## by Diego Hernandez
 
 ## Getting Started
